@@ -1,0 +1,11 @@
+{
+  "etl": {
+    "s3": {
+      "protocol": "s3a://",
+      "input_bucket": "input-bucket",
+      "input_prefix": "input-prefix/",
+      "input_files": "input-files"
+    },
+    "name": "Name of ETL EMR Scaffold"
+  }
+}
