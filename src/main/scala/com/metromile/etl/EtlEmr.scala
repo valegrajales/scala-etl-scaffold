@@ -14,10 +14,12 @@ class EtlEmr extends BaseETL{
 
   override def transform(spark: SparkSession, df: DataFrame): DataFrame = {
     // Transform method
+    df
   }
 
   override def load(spark: SparkSession, df: DataFrame): DataFrame = {
     // Load or save method
+    df
   }
 
   def extractData(payloadEncoded: String, varType: String): Unit = {

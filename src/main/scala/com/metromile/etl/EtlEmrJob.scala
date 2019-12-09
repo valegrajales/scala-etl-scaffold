@@ -19,7 +19,7 @@ object EtlEmrJob {
       .appName("Parse device data job")
       .getOrCreate()
 
-    BaseJobExecutor.etlExecution(sparkSession, new ParseDeviceData(), etlConfiguration)
+    //BaseJobExecutor.etlExecution(sparkSession, new ParseDeviceData(), etlConfiguration)
   }
 
 }

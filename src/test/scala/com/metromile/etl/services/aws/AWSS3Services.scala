@@ -1,16 +1,14 @@
-package com.metromile.etl
+package com.metromile.etl.services.aws
 
 import java.net.URI
-import software.amazon.awssdk.services.s3.S3Client
-import software.amazon.awssdk.services.s3.model.{ListBucketsRequest}
-import software.amazon.awssdk.services.s3.model.CreateBucketConfiguration
-import software.amazon.awssdk.services.s3.model.CreateBucketRequest
-import software.amazon.awssdk.services.s3.model.DeleteBucketRequest
+
 import org.scalatest.FlatSpec
+import software.amazon.awssdk.services.s3.S3Client
+import software.amazon.awssdk.services.s3.model.{CreateBucketConfiguration, CreateBucketRequest, DeleteBucketRequest, ListBucketsRequest}
 
 class AWSS3Services extends FlatSpec {
 
-  "A AWS S3" should "have only one bucket" in {
+  /*"A AWS S3"*/ ignore should "have only one bucket" in {
     val s3: S3Client = S3Client.builder().endpointOverride(URI.create("http://localhost:4572")).build()
 
     val bucket = "bucket" + System.currentTimeMillis
