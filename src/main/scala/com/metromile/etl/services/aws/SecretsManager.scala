@@ -119,6 +119,19 @@ case class SecretsManager(
     }
   }
 
+  /**
+    * Delete a secret from AWS SecretsManager service
+    *
+    * @param secretName name of the secret key
+    * @param forceDeleteWithoutRecovery if true the key will be delete without taking recovery time, default true
+    * @throws software.amazon.awssdk.services.secretsmanager.model.ResourceNotFoundException
+    * @throws software.amazon.awssdk.services.secretsmanager.model.InvalidRequestException
+    * @throws software.amazon.awssdk.services.secretsmanager.model.InvalidParameterException
+    * @return deleted secret name
+    */
+  @throws(classOf[ResourceNotFoundException])
+  @throws(classOf[InvalidRequestException])
+  @throws(classOf[InvalidParameterException])
   def deleteStoredSecret(secretName: String,
                          forceDeleteWithoutRecovery: Boolean = true): String = {
     val deleteSecret: DeleteSecretRequest = DeleteSecretRequest
