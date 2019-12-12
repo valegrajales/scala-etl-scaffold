@@ -8,7 +8,9 @@ import org.slf4j.{Logger, LoggerFactory}
 object BaseJobExecutor {
   val logger: Logger = LoggerFactory.getLogger(BaseJobExecutor.getClass)
 
-  /*def etlExecution(spark: SparkSession, process: ParseDeviceData, config: Config): Unit = {
+  def etlExecution(spark: SparkSession,
+                   process: ParseDeviceData,
+                   config: Config): Unit = {
     logger.info("Starting ETL: " + config.getString("etl.name"))
 
     var inputs: String = config.getString("etl.s3.protocol") +
@@ -21,5 +23,5 @@ object BaseJobExecutor {
     process.set_input_files(List(inputs))
 
     process.execute(spark)
-  }*/
+  }
 }

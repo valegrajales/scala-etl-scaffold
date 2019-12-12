@@ -6,6 +6,9 @@
       "input_prefix": "input-prefix/",
       "input_files": "input-files"
     },
-    "name": "Name of ETL EMR Scaffold"
+    "name": "Name of ETL EMR Scaffold",
+    "secrets": {
+      "name": ""
+    }
   }
 }
